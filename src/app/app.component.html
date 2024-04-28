@@ -1,0 +1,18 @@
+<h1>Pass value from type script to Html</h1>
+<h1>Pass value from type script to {{YT}} </h1>
+<h2>{{title}}</h2>
+<h2>{{getyoutubechannel()}}</h2>
+<h3>Name: {{obj.name}}, Age: {{obj.age}} Gender: {{obj.gender}}</h3>
+Name: <input type="text" (keyup)="getvalue($any($event.target).value)">
+<h2>Name variable:{{ytname}}</h2>
+##########################################<br>
+value 1 : <input  type="text" #num1 [value]="number1">
+value 2 : <input  type="text" #num2 [value]="number2">
+<button (click)="calc(num1.value,num2.value)">sum</button>
+<h3>Sum = {{sum}}</h3>  <br>
+<span (mouseleave)="eventhandling('Mouse Over handling event')" style="background-color: brown;">This is span element</span><br>
+<input type="text" #txt (blur)="eventhandling(txt.value)"><br>
+<button (click)="eventhandling('Event Handling')">Click Here</button><br>
+<h3>This to demonstrate angular 14 two way data binding</h3>
+Enter your name : <input type="text" [(ngModel)]=txt1><br>
+<h1>Your Name is : {{txt1}}</h1>
